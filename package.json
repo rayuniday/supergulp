@@ -1,0 +1,8 @@
+{
+  "name": "supergulp",
+  "version": "1.0.0",
+  "description": "Learn Gul by building an awesome development environment",
+  "repository": "https://github.com/rayuniday/supergulp.git",
+  "author": "Rayun <rayuniday@naver.com>",
+  "license": "MIT"
+}
