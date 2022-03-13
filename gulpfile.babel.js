@@ -6,6 +6,8 @@ import image from "gulp-image";
 // import sass from "gulp-sass";
 import bro from "gulp-bro";
 import babelify from "babelify";
+import autoprefixer from "gulp-autoprefixer";
+import miniCSS from "gulp-csso";
 
 const sass = require("gulp-sass")(require("node-sass"));
 
@@ -47,6 +49,12 @@ const styles = () =>
   gulp
     .src(routes.scss.src)
     .pipe(sass().on("error", sass.logError))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"],
+      })
+    )
+    .pipe(miniCSS())
     .pipe(gulp.dest(routes.scss.dest));
 
 const js = () =>
